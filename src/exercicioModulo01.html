@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Exercicios: Modulo 01</title>
+  </head>
+  <body>
+    <script>
+      var endereco = {
+        rua: "Rua dos pinheiiros",
+        numero: 1293,
+        bairro: "centro",
+        cidade: "Sao Paulo",
+        uf: "SP"
+      };
+
+      function retornaEnderecoString() {
+        return (
+          "O usuario mora em " +
+          endereco.cidade +
+          " / " +
+          endereco.uf +
+          ", no bairro " +
+          endereco.bairro +
+          ", na rua " +
+          endereco.rua +
+          " com numero " +
+          endereco.numero
+        );
+      }
+
+      console.log(retornaEnderecoString());
+
+      console.log("----------------------------------");
+
+      function pares(x, y) {
+        for (var i = x; i <= y; i++) {
+          if (i % 2 === 0) {
+            console.log(i);
+          }
+        }
+      }
+
+      pares(32, 321);
+
+      console.log("----------------------------------");
+
+      function temHabilidade(skills) {
+        skills.forEach(skill => {
+          console.log("Tem Habilidade em " + skill);
+          console.log(skill === "JavaScript");
+        });
+      }
+
+      var skills = ["JavaScript", "ReactJS", "ReactNative"];
+
+      setInterval(temHabilidade(skills), 5000);
+
+      console.log("----------------------------------");
+
+      function experiencia(anos) {
+        if (anos < 1) {
+          return "iniciante";
+        }
+
+        if (anos >= 1 && anos < 3) {
+          return "intermediario";
+        }
+
+        if (anos >= 3 && anos <= 6) {
+          return "Avancado";
+        }
+
+        if (anos > 6) {
+          return "Mestre Jedi";
+        }
+      }
+
+      console.log(experiencia(0.1));
+
+      console.log("----------------------------------");
+
+      var usuarios = [
+        {
+          nome: "Diego",
+          habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+          nome: "Gabriel",
+          habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+      ];
+
+      function apresentaHabilidadesDeUsuarios(usuarios) {
+        for (usuario of usuarios) {
+          console.log("O " + usuario.nome + " possui as habilidades: " + usuario.habilidades.join(", "));
+        }
+      }
+
+      apresentaHabilidadesDeUsuarios(usuarios);
+    </script>
+  </body>
+</html>

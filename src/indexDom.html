@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>JavaScript DOM</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="box"></div>
+      <!-- <input type="text" name="nome" id="nome" />
+      <button class="botao">Adicionar</button> -->
+    </div>
+
+    <script>
+      //________________________________________________________________________
+      // Referencia e manpulacao de objetos
+
+      // var inputElement = document.getElementById("nome");
+      // var inputElement = document.getElementsByTagName("input");
+      // var inputElement = document.querySelector("div#app input");
+
+      // var btnElement = document.querySelector("button.botao");
+      // var inputElement = document.querySelector("input[name=nome]")
+      // console.log(btnElement);
+
+      // btnElement.onclick = function() {
+      //   var text = inputElement.value;
+      //   alert(text);
+      // }
+      //________________________________________________________________________
+
+      //________________________________________________________________________
+      //Manipulacao de atributos e adicao de elementos na DOM
+      // var linkElement = document.createElement("a");
+
+      // linkElement.setAttribute("href", "http://rocketseat.com.br");
+
+      // var textElement = document.createTextNode("Acessar site da RocketSeat");
+
+      // linkElement.appendChild(textElement);
+
+      // var containerElement = document.querySelector("#app");
+      // containerElement.appendChild(linkElement);
+      //________________________________________________________________________
+
+      var boxElement = document.querySelector(".box");
+
+      boxElement.style.width = 100;
+      boxElement.style.height = 100;
+      boxElement.style.backgroundColor = "#f00";
+    </script>
+  </body>
+</html>
